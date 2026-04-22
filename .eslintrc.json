@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "linebreak-style": ["error", "lf"]
+  },
+  "extends": ["plugin:prettier/recommended"]
+}

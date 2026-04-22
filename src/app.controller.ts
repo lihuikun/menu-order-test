@@ -1,12 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { ApiTags, ApiOperation } from '@nestjs/swagger';
 
-@Controller()
+@ApiTags('菜单模块')
+@Controller('menu')
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('random')
+  @ApiOperation({ summary: '随机推荐一个吃的' })
+  getRandomMenu() {
+    return '麻辣烫';
   }
 }
